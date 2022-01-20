@@ -1,0 +1,18 @@
+<button id='get'>GET</button>
+<button id='post'>POST</button>
+<button id='json'>JSON</button>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    document.querySelector('#get').addEventListener('click', () => {
+        const data = axios({
+            url: '/second/req/ajax/exam/',
+            method: 'get',
+            params: {           
+            }
+        });
+        data.then(function (res) {
+            console.log(res.data);        
+        });
+    });
+</script>

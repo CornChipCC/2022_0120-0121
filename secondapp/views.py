@@ -49,3 +49,22 @@ def army_shop2(request,year,month):
     for i in shop:
         result += '%s %s %s<br>' % (i.year, i.month, i.name)
     return HttpResponse()
+
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+from django.forms.models import model_to_dict
+@csrf_exempt
+def ajaxGet(request):
+    #QeurySet []
+    c = Course.objects.all()
+
+    data = []
+    # model_to_dict - 조회된 데이터를 dict 형태로 변경
+    for a in c:
+        d = model_to_dict(a)
+        data.append(d)
+    return JsonResponse(data, safe=False)
+
+def ajaxExam(request):
+    return render( request, 
+                    'secondapp/ajax_exam.html')

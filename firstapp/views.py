@@ -56,7 +56,7 @@ def req_ajax4(request):
     return render(request, 'firstapp/ajax4.html')
 
 import json
-from django.vies.decorators import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def req_json(request):
     obj = request.body.decode("utf-8")
