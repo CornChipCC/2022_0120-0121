@@ -1,0 +1,22 @@
+<body>
+    <h1>ArmyShop</h1>
+    <hr>
+    <table>
+        <tr>
+            <td>순번</td>
+            <td>연도</td>
+            <td>월</td>
+            <td>종류</td>
+            <td>제품명</td>
+        </tr>
+        {% for item in shop %}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.year}}</td>
+                <td>{{item.month}}</td>
+                <td>{{item.type}}</td>
+                <td>{{item.name}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>

@@ -1,0 +1,9 @@
+<body>
+    <h1>Jeju</h1>
+    <hr>
+    {% for jeju in jeju_list %}
+        <h3>{{ jeju.course }} / {{ jeju.course_name }} / {{jeju.distance}}
+             / {{jeju.time_info}} / {{jeju.start_end_info}} / {{jeju.cre_date}} <br>
+        </h3>
+    {% endfor %}
+</body>
