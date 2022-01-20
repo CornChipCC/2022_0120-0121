@@ -54,3 +54,9 @@ def req_post(request):
 
 def req_ajax4(request):
     return render(request, 'firstapp/ajax4.html')
+
+import json
+def req_json(request):
+    obj = request.body.decode("utf-8")
+    data = json.loads(obj)
+    return JsonResponse(data)
