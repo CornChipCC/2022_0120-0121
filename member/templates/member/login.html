@@ -16,4 +16,14 @@ id="password" value="{{ form.password.value | default_if_none:'' }}">
 </div>
 <button type="submit" class="btn btn-primary">로그인</button>
 </form>
+{% if user.is_authenticated %}
+<p>
+    <a class='nav-link' href="{% url 'member:logout' %}">
+    {{ user.username }} 님 반갑습니다. (로그아웃)
+    </a>
+</p>
+
+{% else %}
+<p>현재 상태 : Guest</p>
+{% endif %}
 </div>
