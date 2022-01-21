@@ -1,0 +1,7 @@
+<ul>
+    {% for person in persons %}
+        <li>{{ person.num }}, {{ person.name }}, {{ person.score }}</li>
+    {% endfor %}
+    </ul>
+    {% if 'Cat' in animals %} 🐈 {% endif %}
+    {% if 'Tiger' not in animals %} 🐕 {% endif %}
