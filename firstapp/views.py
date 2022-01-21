@@ -76,3 +76,13 @@ def tag(request):
     }
     return render(
         request, 'firstapp/tag.html', context)
+
+def custom_filter(request):
+    context = { 'price': 39800.5 }
+    return render(
+        request, 'firstapp/custom_filter.html', context)
+
+from django.shortcuts import render
+def template(request):
+    return render(
+        request, 'firstapp/template.html')

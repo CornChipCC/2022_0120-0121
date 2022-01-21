@@ -10,4 +10,6 @@ urlpatterns = [
     path('req/ajax4/', views.req_ajax4),
     path('req/json/', views.req_json),
     path('tag/', views.tag),
+    path('custom_filter/', views.custom_filter),
+    path('template/', views.template),
 ]
