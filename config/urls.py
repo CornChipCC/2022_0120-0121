@@ -28,4 +28,5 @@ urlpatterns = [
     path('third/', include('thirdapp.urls')),
     path('member/', include('member.urls')),
     path('paging/', include('paging.urls')),
+    path('file/', include('file.urls')),
 ]
