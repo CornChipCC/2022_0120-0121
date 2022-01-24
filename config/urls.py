@@ -27,4 +27,5 @@ urlpatterns = [
     path('second/', include('secondapp.urls')),
     path('third/', include('thirdapp.urls')),
     path('member/', include('member.urls')),
+    path('paging/', include('paging.urls')),
 ]

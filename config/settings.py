@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'secondapp',
     'thirdapp',
     'member',
+    'paging',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
